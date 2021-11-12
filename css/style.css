@@ -1,0 +1,338 @@
+/* Importando font do google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,800&display=swap');
+
+/* Resetando margin e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 55%;
+    font-family: 'Oswald', sans-serif;
+    /* background do fundo*/
+    background: #fff url(../img/Projeto2.1.png) center center/cover no-repeat fixed;
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header{
+    width: 100%;
+    background-color: #82212b;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style do botão hamburguer do menu responsivo */
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+/* NavBar do Header */
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item {
+    margin-left: 5rem;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #ffffff;
+}
+.nav-link:hover{
+    color: gray;
+}
+
+.nav-link2{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: black;
+    border-style: solid;
+    border-width: 8px 15px 8px 15px;
+    border-color: black;
+    letter-spacing: 2px;
+}
+.nav-link2:hover{
+    padding: 8px 15px 8px 15px;
+    border-width: 3px;
+    border-color: black;
+    background-color: #ffffff;
+    color: black;
+    
+}
+
+
+
+/* Container e grid */
+
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "backSlide slideArea nextSlide"
+      ". icons .";
+  }
+  
+/* Seta */
+.fas{
+    color: black;
+}
+.fas:hover{
+    color: #82212b;
+}
+
+/* Seta para voltar */
+.backSlide { 
+    grid-area: 1 / 1 / 3 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
+/* Seta para pular */
+.nextSlide { 
+    grid-area: 1 / 3 / 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
+/* Slide Meio */
+.slideArea { 
+    grid-area: slideArea;
+    width: 100%;
+    height: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textSlide{
+    display: flex;
+    align-items: center;
+    font-weight:bold;
+    font-size: 7rem;
+    margin-left: -0.9rem;
+    color: #82212b;
+}
+
+.textSlide h2 {
+    color: transparent;
+    font-size: 14rem;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #82212b;
+}
+
+.paragraphSlide{
+    display: flex;
+    font-size: 2rem;
+    width: 85rem;
+    height: 9rem;
+    word-break: break-all;
+    justify-content: center;
+}
+.paragraphSlide a{
+    font-size: 7rem;
+    color: #82212b;
+    margin-left: 5rem;
+    margin-top: -0.55rem;
+}
+
+
+/* Botão Laern More, de baixo do slide */
+.div-learn-more{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.learn-more{
+    padding: 10px 50px;
+    border: 3px solid #82212b;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #82212b;
+}
+
+.learn-more:hover{
+    color: white;
+    background-color: #82212b;
+}
+
+
+/* Icones */
+
+.icons { 
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    grid-area: 2 / 2 / 3 / 3;
+    margin-top: -10rem;
+}
+
+.icons img{
+    width: 400px;
+}
+
+/* Paginas do Slide */
+
+.pageSlide{
+    display: flex;
+    justify-content: end;
+    font-size: 30px;
+}
+
+
+
+
+
+/*               Responsividade                */
+
+
+@media only screen and (max-width: 1130px) {
+    .textSlide{
+        font-size: 6rem;
+    }
+    
+    .textSlide h2 {
+        font-size: 12rem;
+    }
+    .paragraphSlide{
+        font-size: 1.9rem;
+        width: 80%;
+    }
+    .paragraphSlide a{
+        font-size: 7rem;
+        width: 20%;
+    }
+}
+
+
+@media only screen and (max-width: 970px) {
+    .textSlide{
+        font-size: 5.5rem;
+    }
+    
+    .textSlide h2 {
+        font-size: 11rem;
+    }
+}
+
+@media only screen and (max-width: 888px) {
+    .textSlide{
+        font-size: 5rem;
+    }
+    
+    .textSlide h2 {
+        font-size: 10rem;
+    }
+}
+
+
+@media only screen and (max-width: 815px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 10rem;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .textSlide{
+        font-size: 4rem;
+        margin-left: 4.4rem;
+    }
+    
+    .textSlide h2 {
+        font-size: 8rem;
+    }
+    .paragraphSlide{
+        font-size: 1.5rem;
+        margin-left: 5rem;
+    }
+    .paragraphSlide a{
+        font-size: 5rem;
+        margin-left: 1rem;
+    }
+    .teste{
+        font-size: 10px;
+        margin-left: 4.5rem;
+    }
+}
+
+@media only screen and (max-width: 724px) {
+    .textSlide{
+        font-size: 3rem;
+    }
+    
+    .textSlide h2 {
+        font-size: 6rem;
+    }
+    .teste{
+        font-size: 10px;
+        margin-left: 4.5rem;
+    }
+    html {
+        width: 143.2%;
+    }
+    .icons img{
+        width: 250px;
+    }
+    .pageSlide{
+        font-size: 40px;
+    }
+    
+}
+
+
+
+
+
+
